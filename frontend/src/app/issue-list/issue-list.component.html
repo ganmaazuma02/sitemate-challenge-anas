@@ -1,0 +1,14 @@
+<div>
+  <input type="text" #issueTitle placeholder="Issue Title">
+  <input type="text" #issueDescription placeholder="Issue Description">
+  <button (click)="createIssue(issueTitle.value, issueDescription.value)">Add</button>
+</div>
+
+<ul>
+    <li *ngFor="let issue of issueList">
+      <input type="text" placeholder="Issue Title" value="{{ issue.title }}" [(ngModel)]="issue.title">
+      <input type="text" placeholder="Issue Description" value="{{ issue.description }}" [(ngModel)]="issue.description">
+      <button (click)="updateIssue(issue.id, issue.title, issue.description)">Update</button>
+      <button (click)="deleteIssue(issue.id)">Delete</button>
+    </li>
+</ul>

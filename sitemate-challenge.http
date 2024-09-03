@@ -1,0 +1,6 @@
+@sitemate_challenge_HostAddress = http://localhost:5261
+
+GET {{sitemate_challenge_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
